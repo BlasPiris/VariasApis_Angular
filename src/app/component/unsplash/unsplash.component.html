@@ -1,0 +1,11 @@
+<div>
+    <form #form="ngForm" (ngSubmit)="buscar()">
+    <input type="text" name="busqueda" [(ngModel)]="busqueda">
+    <input type="submit">
+    </form>
+</div>
+
+<div *ngFor="let photo of photos">
+    <img src="{{photo.preview_photos[0].urls.raw}}">
+</div>
+

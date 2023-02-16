@@ -1,0 +1,12 @@
+<div>
+    <form #form="ngForm">
+    <input type="text" name="busqueda" [(ngModel)]="busqueda">
+    <button (click)="getGif()">Buscar Gifs</button>
+    <button (click)="getSticker()">Buscar Stickers</button>
+    </form>
+</div>
+
+<div *ngFor="let photo of photos">
+    <img src="{{photo.images.original.url}}">
+</div>
+
